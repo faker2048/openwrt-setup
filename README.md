@@ -5,6 +5,8 @@ OpenWrt自动化设置脚本集合
 ## 使用方法
 
 一行命令安装：
+
+如果没有安装 curl 可以使用 `wget -O- ` 代替
 ```bash
 curl -fsSL https://raw.githubusercontent.com/faker2048/openwrt-setup/master/setup.sh | sh
 
