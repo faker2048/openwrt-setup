@@ -28,7 +28,7 @@ curl -fsSL https://gh-proxy.com/https://raw.githubusercontent.com/faker2048/open
 - sing-box
 - homeproxy (修改版)
 
-## 一些短链接
+## Tips
 可以先创建一个短链接来手动输入
 ```bash
 # 创建setup.sh的短链接
