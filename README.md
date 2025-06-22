@@ -27,9 +27,9 @@ curl -fsSL https://gh-proxy.com/https://raw.githubusercontent.com/faker2048/open
 ## 一些短链接
 可以先创建一个短链接来手动输入
 ```
-curl -s "http://tinyurl.com/api-create.php?url=https://gh-proxy/https://raw.githubusercontent.com/faker2048/openwrt-setup/master/scripts/00-setup_mirrors.sh"
+curl -s "http://tinyurl.com/api-create.php?url=https://gh-proxy.com/https://raw.githubusercontent.com/faker2048/openwrt-setup/master/scripts/00-setup_mirrors.sh"
 
-curl -fsSL 这条短链接 | sh
+wget -O- 这条短链接 | sh
 
 curl -s "http://tinyurl.com/api-create.php?url=https://gh-proxy.com/https://raw.githubusercontent.com/faker2048/openwrt-setup/master/setup.sh"
 
