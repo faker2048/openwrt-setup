@@ -1,6 +1,6 @@
 #!/bin/sh
 
-BASE_URL="https://gh-proxy/https://raw.githubusercontent.com/faker2048/openwrt-setup/master/scripts"
+BASE_URL="https://gh-proxy.com/https://raw.githubusercontent.com/faker2048/openwrt-setup/master/scripts"
 
 echo "Starting OpenWrt setup..."
 
