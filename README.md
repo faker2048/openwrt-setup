@@ -9,7 +9,7 @@ OpenWrt自动化设置脚本集合
 curl -fsSL https://raw.githubusercontent.com/faker2048/openwrt-setup/master/setup.sh | sh
 
 # 带加速
-curl -fsSL https://gh-proxy/https://raw.githubusercontent.com/faker2048/openwrt-setup/master/setup.sh | sh
+curl -fsSL https://gh-proxy.com/https://raw.githubusercontent.com/faker2048/openwrt-setup/master/setup.sh | sh
 ```
 
 ## 脚本功能
