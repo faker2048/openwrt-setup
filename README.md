@@ -12,12 +12,6 @@ curl -fsSL https://raw.githubusercontent.com/faker2048/openwrt-setup/master/setu
 curl -fsSL https://gh-proxy.com/https://raw.githubusercontent.com/faker2048/openwrt-setup/master/setup.sh | sh
 ```
 
-## 短链接
-可以先创建一个短链接来手动输入
-```
-curl -s "http://tinyurl.com/api-create.php?url=https://gh-proxy.com/https://raw.githubusercontent.com/faker2048/openwrt-setup/master/setup.sh"
-```
-
 ## 脚本功能
 
 - `01-expend_root.sh` - 扩展根文件系统
@@ -29,6 +23,18 @@ curl -s "http://tinyurl.com/api-create.php?url=https://gh-proxy.com/https://raw.
 - bash, curl, tmux
 - sing-box
 - homeproxy (修改版)
+
+## 一些短链接
+可以先创建一个短链接来手动输入
+```
+curl -s "http://tinyurl.com/api-create.php?url=https://gh-proxy/https://raw.githubusercontent.com/faker2048/openwrt-setup/master/scripts/00-setup_mirrors.sh"
+
+wget -O- 这条短链接 | sh
+
+curl -s "http://tinyurl.com/api-create.php?url=https://gh-proxy.com/https://raw.githubusercontent.com/faker2048/openwrt-setup/master/setup.sh"
+
+
+```
 
 ## 仓库地址
 
