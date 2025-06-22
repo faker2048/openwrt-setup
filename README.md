@@ -12,6 +12,12 @@ curl -fsSL https://raw.githubusercontent.com/faker2048/openwrt-setup/master/setu
 curl -fsSL https://gh-proxy.com/https://raw.githubusercontent.com/faker2048/openwrt-setup/master/setup.sh | sh
 ```
 
+## 短链接
+可以先创建一个短链接来手动输入
+```
+curl -s "http://tinyurl.com/api-create.php?url=https://gh-proxy.com/https://raw.githubusercontent.com/faker2048/openwrt-setup/master/setup.sh"
+```
+
 ## 脚本功能
 
 - `01-expend_root.sh` - 扩展根文件系统
