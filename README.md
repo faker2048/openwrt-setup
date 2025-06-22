@@ -29,7 +29,7 @@ curl -fsSL https://gh-proxy.com/https://raw.githubusercontent.com/faker2048/open
 ```
 curl -s "http://tinyurl.com/api-create.php?url=https://gh-proxy/https://raw.githubusercontent.com/faker2048/openwrt-setup/master/scripts/00-setup_mirrors.sh"
 
-wget -O- 这条短链接 | sh
+curl -fsSL 这条短链接 | sh
 
 curl -s "http://tinyurl.com/api-create.php?url=https://gh-proxy.com/https://raw.githubusercontent.com/faker2048/openwrt-setup/master/setup.sh"
 
