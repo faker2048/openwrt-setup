@@ -3,6 +3,7 @@
 BASE_URL="https://gh-proxy.com/https://raw.githubusercontent.com/faker2048/openwrt-setup/master/scripts"
 SETUP_DIR="setup"
 STAGE_FILE="$SETUP_DIR/.setup_stage"
+TIMESTAMP=$(date +%s)
 
 echo "Starting OpenWrt setup..."
 
@@ -10,12 +11,12 @@ echo "Starting OpenWrt setup..."
 echo "Creating setup directory: $SETUP_DIR"
 mkdir -p "$SETUP_DIR"
 
-# Download scripts
+# Download scripts with timestamp to bypass cache
 echo "Downloading scripts..."
-wget -U "" -O "$SETUP_DIR/00-setup_mirrors.sh" "$BASE_URL/00-setup_mirrors.sh"
-wget -U "" -O "$SETUP_DIR/01-expend_root.sh" "$BASE_URL/01-expend_root.sh"
-wget -U "" -O "$SETUP_DIR/02-set_up_lan_ip.sh" "$BASE_URL/02-set_up_lan_ip.sh"
-wget -U "" -O "$SETUP_DIR/03-install-packages.sh" "$BASE_URL/03-install-packages.sh"
+wget -U "" -O "$SETUP_DIR/00-setup_mirrors.sh" "$BASE_URL/00-setup_mirrors.sh?t=$TIMESTAMP"
+wget -U "" -O "$SETUP_DIR/01-expend_root.sh" "$BASE_URL/01-expend_root.sh?t=$TIMESTAMP"
+wget -U "" -O "$SETUP_DIR/02-set_up_lan_ip.sh" "$BASE_URL/02-set_up_lan_ip.sh?t=$TIMESTAMP"
+wget -U "" -O "$SETUP_DIR/03-install-packages.sh" "$BASE_URL/03-install-packages.sh?t=$TIMESTAMP"
 
 # Make scripts executable
 chmod +x "$SETUP_DIR"/*.sh
@@ -39,7 +40,7 @@ case $STAGE in
         # Create continuation script
         cat > /etc/uci-defaults/99-continue-setup << 'EOF'
 #!/bin/sh
-SETUP_DIR="setup/openwrt"
+SETUP_DIR="setup"
 if [ -f "$SETUP_DIR/.setup_stage" ]; then
     sh /root/setup.sh
     rm -f /etc/uci-defaults/99-continue-setup
